@@ -1,0 +1,12 @@
+C:\Senthil\Projects\ProjectManager\ProjectManager.DataAccesslayer\bin\Debug\netcoreapp2.0\ProjectManager.DataAccesslayer.deps.json
+C:\Senthil\Projects\ProjectManager\ProjectManager.DataAccesslayer\bin\Debug\netcoreapp2.0\ProjectManager.DataAccesslayer.dll
+C:\Senthil\Projects\ProjectManager\ProjectManager.DataAccesslayer\bin\Debug\netcoreapp2.0\ProjectManager.DataAccesslayer.pdb
+C:\Senthil\Projects\ProjectManager\ProjectManager.DataAccesslayer\bin\Debug\netcoreapp2.0\ProjectManager.Model.dll
+C:\Senthil\Projects\ProjectManager\ProjectManager.DataAccesslayer\bin\Debug\netcoreapp2.0\ProjectManager.Model.pdb
+C:\Senthil\Projects\ProjectManager\ProjectManager.DataAccesslayer\obj\Debug\netcoreapp2.0\ProjectManager.DataAccesslayer.csprojAssemblyReference.cache
+C:\Senthil\Projects\ProjectManager\ProjectManager.DataAccesslayer\obj\Debug\netcoreapp2.0\ProjectManager.DataAccesslayer.csproj.CoreCompileInputs.cache
+C:\Senthil\Projects\ProjectManager\ProjectManager.DataAccesslayer\obj\Debug\netcoreapp2.0\ProjectManager.DataAccesslayer.AssemblyInfoInputs.cache
+C:\Senthil\Projects\ProjectManager\ProjectManager.DataAccesslayer\obj\Debug\netcoreapp2.0\ProjectManager.DataAccesslayer.AssemblyInfo.cs
+C:\Senthil\Projects\ProjectManager\ProjectManager.DataAccesslayer\obj\Debug\netcoreapp2.0\ProjectManager.DataAccesslayer.csproj.CopyComplete
+C:\Senthil\Projects\ProjectManager\ProjectManager.DataAccesslayer\obj\Debug\netcoreapp2.0\ProjectManager.DataAccesslayer.dll
+C:\Senthil\Projects\ProjectManager\ProjectManager.DataAccesslayer\obj\Debug\netcoreapp2.0\ProjectManager.DataAccesslayer.pdb

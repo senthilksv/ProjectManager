@@ -1,0 +1,9 @@
+C:\Senthil\Projects\ProjectManager\ProjectManager.Model\bin\Debug\netcoreapp2.1\ProjectManager.Model.deps.json
+C:\Senthil\Projects\ProjectManager\ProjectManager.Model\bin\Debug\netcoreapp2.1\ProjectManager.Model.dll
+C:\Senthil\Projects\ProjectManager\ProjectManager.Model\bin\Debug\netcoreapp2.1\ProjectManager.Model.pdb
+C:\Senthil\Projects\ProjectManager\ProjectManager.Model\obj\Debug\netcoreapp2.1\ProjectManager.Model.csprojAssemblyReference.cache
+C:\Senthil\Projects\ProjectManager\ProjectManager.Model\obj\Debug\netcoreapp2.1\ProjectManager.Model.csproj.CoreCompileInputs.cache
+C:\Senthil\Projects\ProjectManager\ProjectManager.Model\obj\Debug\netcoreapp2.1\ProjectManager.Model.AssemblyInfoInputs.cache
+C:\Senthil\Projects\ProjectManager\ProjectManager.Model\obj\Debug\netcoreapp2.1\ProjectManager.Model.AssemblyInfo.cs
+C:\Senthil\Projects\ProjectManager\ProjectManager.Model\obj\Debug\netcoreapp2.1\ProjectManager.Model.dll
+C:\Senthil\Projects\ProjectManager\ProjectManager.Model\obj\Debug\netcoreapp2.1\ProjectManager.Model.pdb

@@ -1,0 +1,14 @@
+C:\Senthil\Projects\ProjectManager\ProjectManager.BusinessLayer\bin\Debug\netcoreapp2.0\ProjectManager.BusinessLayer.deps.json
+C:\Senthil\Projects\ProjectManager\ProjectManager.BusinessLayer\bin\Debug\netcoreapp2.0\ProjectManager.BusinessLayer.dll
+C:\Senthil\Projects\ProjectManager\ProjectManager.BusinessLayer\bin\Debug\netcoreapp2.0\ProjectManager.BusinessLayer.pdb
+C:\Senthil\Projects\ProjectManager\ProjectManager.BusinessLayer\bin\Debug\netcoreapp2.0\ProjectManager.DataAccesslayer.dll
+C:\Senthil\Projects\ProjectManager\ProjectManager.BusinessLayer\bin\Debug\netcoreapp2.0\ProjectManager.Model.dll
+C:\Senthil\Projects\ProjectManager\ProjectManager.BusinessLayer\bin\Debug\netcoreapp2.0\ProjectManager.DataAccesslayer.pdb
+C:\Senthil\Projects\ProjectManager\ProjectManager.BusinessLayer\bin\Debug\netcoreapp2.0\ProjectManager.Model.pdb
+C:\Senthil\Projects\ProjectManager\ProjectManager.BusinessLayer\obj\Debug\netcoreapp2.0\ProjectManager.BusinessLayer.csprojAssemblyReference.cache
+C:\Senthil\Projects\ProjectManager\ProjectManager.BusinessLayer\obj\Debug\netcoreapp2.0\ProjectManager.BusinessLayer.csproj.CoreCompileInputs.cache
+C:\Senthil\Projects\ProjectManager\ProjectManager.BusinessLayer\obj\Debug\netcoreapp2.0\ProjectManager.BusinessLayer.AssemblyInfoInputs.cache
+C:\Senthil\Projects\ProjectManager\ProjectManager.BusinessLayer\obj\Debug\netcoreapp2.0\ProjectManager.BusinessLayer.AssemblyInfo.cs
+C:\Senthil\Projects\ProjectManager\ProjectManager.BusinessLayer\obj\Debug\netcoreapp2.0\ProjectManager.BusinessLayer.csproj.CopyComplete
+C:\Senthil\Projects\ProjectManager\ProjectManager.BusinessLayer\obj\Debug\netcoreapp2.0\ProjectManager.BusinessLayer.dll
+C:\Senthil\Projects\ProjectManager\ProjectManager.BusinessLayer\obj\Debug\netcoreapp2.0\ProjectManager.BusinessLayer.pdb
