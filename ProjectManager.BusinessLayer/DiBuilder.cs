@@ -12,7 +12,9 @@ namespace ProjectManager.BusinessLayer
     {
         public static void Build(IServiceCollection services, IConfiguration config)
         {
-            ///services.AddTransient<ITaskRepository, TaskRepository>();
+            services.AddTransient<ITaskRepository, TaskRepository>();
+            services.AddTransient<IProjectRepository, ProjectRepository>();
+            services.AddTransient<IUserRepository, UserRepository>();
             services.AddEntityFrameworkSqlServer().
                 AddDbContext<ProjectManagerDbContext>(option => option.UseSqlServer(config.GetSection("Database").GetSection("Connection").Value));
 

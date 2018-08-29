@@ -26,7 +26,9 @@ namespace ProjectManager.Service
         {
             services.AddCors();
             services.AddMvc();
-
+            services.AddTransient<IManageTask, ManageTask>();
+            services.AddTransient<IManageProject, ManageProject>();
+            services.AddTransient<IManageUser, ManageUser>();
             BuildOtherLayerServices(services);
         }
         

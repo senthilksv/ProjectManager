@@ -41,9 +41,8 @@ namespace ProjectManager.Service.Controllers
             }
         }
 
-        // GET: api/Projects/5
-        // GET: api/Tasks/5
-        [HttpGet("{id}", Name = "Get")]
+        // GET: api/Projects/5       
+        [HttpGet("{id}", Name = "GetProject")]
         public async Task<IActionResult> GetAsync(int id)
         {
             try
@@ -59,7 +58,7 @@ namespace ProjectManager.Service.Controllers
             }
         }
 
-        // POST: api/Tasks
+        // POST: api/Projects
         [HttpPost]
         public async Task<IActionResult> PostAsync([FromBody]Project project)
         {
@@ -84,7 +83,7 @@ namespace ProjectManager.Service.Controllers
             }
         }
 
-        // PUT: api/Tasks/5
+        // PUT: api/Projects/5
         [HttpPut("{id}")]
         public async Task<IActionResult> PutAsync(int id, [FromBody]Project project)
         {
@@ -114,7 +113,7 @@ namespace ProjectManager.Service.Controllers
             }
         }
 
-        // DELETE: api/ApiWithActions/5
+        // DELETE: api/Projects/5
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteAsync(int id)
         {

@@ -41,7 +41,7 @@ namespace ProjectManager.Service.Controllers
         }
 
         // GET: api/Tasks/5
-        [HttpGet("{id}", Name = "Get")]
+        [HttpGet("{id}", Name = "GetTask")]
         public async Task<IActionResult> GetAsync(int id)
         {
             try

@@ -19,7 +19,7 @@ namespace ProjectManager.DataAccesslayer
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer(@"Server = DOTNET; Database = ProjectManagerDb; Trusted_Connection = True;");
+            //optionsBuilder.UseSqlServer(@"Server = DOTNET; Database = ProjectManagerDb; Trusted_Connection = True;");
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)

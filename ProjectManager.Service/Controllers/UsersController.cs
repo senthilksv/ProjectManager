@@ -12,7 +12,7 @@ using ProjectManager.Model;
 namespace ProjectManager.Service.Controllers
 {
     [Produces("application/json")]
-    [Route("api/User")]
+    [Route("api/Users")]
     public class UsersController : Controller
     {
         private readonly IManageUser manageUser;
@@ -42,7 +42,7 @@ namespace ProjectManager.Service.Controllers
         }
 
         // GET: api/Tasks/5
-        [HttpGet("{id}", Name = "Get")]
+        [HttpGet("{id}", Name = "GetUser")]
         public async Task<IActionResult> GetAsync(int id)
         {
             try
