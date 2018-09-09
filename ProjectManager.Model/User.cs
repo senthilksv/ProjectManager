@@ -5,7 +5,7 @@ namespace ProjectManager.Model
 {
     public class User
     {
-        public int Userid { get; set; }
+        public int UserId { get; set; }
 
         public string FirstName { get; set; }
 

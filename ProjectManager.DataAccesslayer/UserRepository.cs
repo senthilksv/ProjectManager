@@ -31,7 +31,8 @@ namespace ProjectManager.DataAccesslayer
 
         public async Task<User> GetAsync(int id)
         {
-            return await projectManagerDbContext.Users.FirstOrDefaultAsync(t => t.Userid == id);
+            return await projectManagerDbContext.Users.Include(userObject => userObject.Projects).Include(userObject => userObject.TaskDetails)
+                .FirstOrDefaultAsync(t => t.UserId == id);
         }
 
         public async Task<int> InsertAsync(User entity)

@@ -18,10 +18,12 @@ namespace ProjectManager.Model
 
         public int UserId { get; set; }
 
-        public User UserDetail { get; set; }
+
+        public bool ActiveStatus { get; set; }
 
         public List<TaskDetail> TaskDetails { get; set; }
 
-        public bool ActiveStatus { get; set; }
+        public User UserDetail { get; set; }
+
     }
 }

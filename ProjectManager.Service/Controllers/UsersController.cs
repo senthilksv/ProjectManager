@@ -67,14 +67,14 @@ namespace ProjectManager.Service.Controllers
                 if (user == null)
                 {
                     logger.LogInformation($"User is null.  Provide valid user details.");
-                    return BadRequest();
+                    return BadRequest($"User is null.  Provide valid user details.");
                 }
 
                 await manageUser.AddUserAsync(user);
 
-                logger.LogInformation($"User has been added Successfully and the new user id is { user.Userid }");
+                logger.LogInformation($"User has been added Successfully and the new user id is { user.UserId }");
 
-                return Ok(user.Userid);
+                return Ok(user.UserId);
             }
             catch (Exception ex)
             {
@@ -90,15 +90,15 @@ namespace ProjectManager.Service.Controllers
             try
             {
                 logger.LogInformation($"Updating user {id}");
-                if (user == null || id != user.Userid)
+                if (user == null || id != user.UserId)
                 {
                     logger.LogInformation("Invalid user to edit");
                     return BadRequest("Invalid user to edit.");
                 }
                 
                 await manageUser.EditUserAsync(id, user);
-                logger.LogInformation($"User has been updated successfully for the user id { user.Userid } ");
-                return Ok(user.Userid);
+                logger.LogInformation($"User has been updated successfully for the user id { user.UserId } ");
+                return Ok(user.UserId);
             }
             catch (Exception ex)
             {
@@ -116,13 +116,13 @@ namespace ProjectManager.Service.Controllers
                 var user = await manageUser.GetUserAsync(id);
                 if (!manageUser.IsUserValidToDelete(user))
                 {
-                    logger.LogInformation("You can not close this task as the task have child tasks");
+                    logger.LogInformation("You can not delete as the user have have association with Project/Task");
                     return BadRequest("You can not delete as the user have have association with Project/Task");
                 }
 
                 await manageUser.DeleteUserAsync(user);
 
-                return Ok(user.Userid);
+                return Ok(user.UserId);
             }
             catch (Exception ex)
             {

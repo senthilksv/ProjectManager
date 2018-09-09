@@ -43,15 +43,15 @@ namespace ProjectManager.BusinessLayer
 
         public async Task<int> DeleteUserAsync(User user)
         {
-            logger.LogInformation($"Deleting user details for the id { user.Userid }");
+            logger.LogInformation($"Deleting user details for the id { user.UserId }");
             return await userRepository.DeleteAsync(user);
         }
 
         public bool IsUserValidToDelete(User userDetail)
         {
             logger.LogInformation("Check if user is valid to delete");
-            //var userCollection = userRepository.GetAllAsync().Result;
-            //return !userCollection.Any(user => user.ParentId == userDetail.Id && !user.EndTask);
+            if (userDetail.Projects.Count > 0 || userDetail.TaskDetails.Count > 0)
+                return false;
 
             return true;
         }

@@ -25,7 +25,8 @@ namespace ProjectManager.Service
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddCors();
-            services.AddMvc();
+            services.AddMvc().AddJsonOptions(
+            options => options.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore); 
             services.AddTransient<IManageTask, ManageTask>();
             services.AddTransient<IManageProject, ManageProject>();
             services.AddTransient<IManageUser, ManageUser>();

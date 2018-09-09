@@ -8,7 +8,7 @@ namespace ProjectManager.DataAccesslayer
     {
         public ProjectManagerDbContext(DbContextOptions options) : base(options)
         {
-
+            
         }
 
         public virtual DbSet<TaskDetail> Tasks { get; set; }
@@ -19,6 +19,7 @@ namespace ProjectManager.DataAccesslayer
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
+            optionsBuilder.UseLazyLoadingProxies(false);
             //optionsBuilder.UseSqlServer(@"Server = DOTNET; Database = ProjectManagerDb; Trusted_Connection = True;");
         }
 
@@ -34,8 +35,8 @@ namespace ProjectManager.DataAccesslayer
             modelBuilder.Entity<TaskDetail>().HasKey("Id");
             modelBuilder.Entity<TaskDetail>().ToTable("Task");
             modelBuilder.Entity<TaskDetail>().Property(t => t.Name).HasColumnName("Task").IsRequired().HasMaxLength(100);
-            modelBuilder.Entity<TaskDetail>().Property(t => t.StartDate).HasColumnName("Start_Date").IsRequired();
-            modelBuilder.Entity<TaskDetail>().Property(t => t.EndDate).HasColumnName("End_Date").IsRequired();
+            modelBuilder.Entity<TaskDetail>().Property(t => t.StartDate).HasColumnName("Start_Date");
+            modelBuilder.Entity<TaskDetail>().Property(t => t.EndDate).HasColumnName("End_Date");
             modelBuilder.Entity<TaskDetail>().Property(t => t.ParentId).HasColumnName("ParentId");
             modelBuilder.Entity<TaskDetail>().Property(t => t.Priority).IsRequired();
             modelBuilder.Entity<TaskDetail>().Property(t => t.ActiveStatus).HasColumnName("Status").IsRequired();
@@ -51,8 +52,8 @@ namespace ProjectManager.DataAccesslayer
             modelBuilder.Entity<Project>().HasKey("ProjectId");
             modelBuilder.Entity<Project>().ToTable("Project");
             modelBuilder.Entity<Project>().Property(t => t.ProjectName).HasColumnName("Project").IsRequired().HasMaxLength(100);
-            modelBuilder.Entity<Project>().Property(t => t.StartDate).HasColumnName("Start_Date").IsRequired();
-            modelBuilder.Entity<Project>().Property(t => t.EndDate).HasColumnName("End_Date").IsRequired();          
+            modelBuilder.Entity<Project>().Property(t => t.StartDate).HasColumnName("Start_Date");
+            modelBuilder.Entity<Project>().Property(t => t.EndDate).HasColumnName("End_Date");          
             modelBuilder.Entity<Project>().Property(t => t.Priority).IsRequired();
             modelBuilder.Entity<Project>().Property(t => t.ActiveStatus).HasColumnName("Status").IsRequired();
             modelBuilder.Entity<Project>().Property(t => t.ProjectId).ValueGeneratedOnAdd().HasColumnName("Project_Id").IsRequired();          
@@ -62,12 +63,12 @@ namespace ProjectManager.DataAccesslayer
 
         private static void BuildUserTable(ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<User>().HasKey("Userid");
+            modelBuilder.Entity<User>().HasKey("UserId");
             modelBuilder.Entity<User>().ToTable("User");
             modelBuilder.Entity<User>().Property(t => t.FirstName).HasColumnName("FirstName").IsRequired().HasMaxLength(100);
             modelBuilder.Entity<User>().Property(t => t.LastName).HasColumnName("LastName").IsRequired().HasMaxLength(100); ;
             modelBuilder.Entity<User>().Property(t => t.EmployeeId).HasColumnName("Employee_Id").IsRequired();
-            modelBuilder.Entity<User>().Property(t => t.Userid).ValueGeneratedOnAdd().HasColumnName("User_Id").IsRequired();
+            modelBuilder.Entity<User>().Property(t => t.UserId).ValueGeneratedOnAdd().HasColumnName("User_Id").IsRequired();
         }
     }
 }

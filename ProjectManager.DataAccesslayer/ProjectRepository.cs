@@ -14,7 +14,7 @@ namespace ProjectManager.DataAccesslayer
         private readonly ILogger<ProjectRepository> logger;
         public ProjectRepository(ProjectManagerDbContext projectManagerDbContext, ILogger<ProjectRepository> logger)
         {
-            this.projectManagerDbContext = projectManagerDbContext;
+            this.projectManagerDbContext = projectManagerDbContext;          
             this.logger = logger;
         }
 
@@ -27,16 +27,19 @@ namespace ProjectManager.DataAccesslayer
 
         public async Task<IEnumerable<Project>> GetAllAsync()
         {
-            return await projectManagerDbContext.Projects.AsNoTracking<Project>().ToListAsync();
+            return await projectManagerDbContext.Projects.Include(project => project.TaskDetails).Include(project => project.UserDetail)
+                .AsNoTracking<Project>().ToListAsync();
         }
 
         public async Task<Project> GetAsync(int id)
         {
-            return await projectManagerDbContext.Projects.FirstOrDefaultAsync(t => t.ProjectId == id);
+            return await projectManagerDbContext.Projects.              
+                Include(project => project.TaskDetails).Include(project => project.UserDetail).FirstOrDefaultAsync(t => t.ProjectId == id);
         }
 
         public async Task<int> InsertAsync(Project entity)
         {
+            entity.UserDetail = null;            
             projectManagerDbContext.Projects.Add(entity);
             return await projectManagerDbContext.SaveChangesAsync();
         }
