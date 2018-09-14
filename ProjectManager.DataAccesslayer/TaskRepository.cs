@@ -26,16 +26,20 @@ namespace ProjectManager.DataAccesslayer
 
         public async Task<IEnumerable<TaskDetail>> GetAllAsync()
         {
-            return await projectManagerDbContext.Tasks.AsNoTracking<TaskDetail>().ToListAsync();
+            return await projectManagerDbContext.Tasks.Include(project => project.UserDetail)
+                .Include(project => project.ProjectDetail).AsNoTracking<TaskDetail>().ToListAsync();
         }
 
         public async Task<TaskDetail> GetAsync(int id)
         {
-            return await projectManagerDbContext.Tasks.FirstOrDefaultAsync(t => t.Id == id);
+            return await projectManagerDbContext.Tasks.Include(project => project.UserDetail)
+                .Include(project => project.ProjectDetail).FirstOrDefaultAsync(t => t.Id == id);
         }
 
         public async Task<int> InsertAsync(TaskDetail entity)
         {
+            entity.UserDetail = null;
+            entity.ProjectDetail = null;
             projectManagerDbContext.Tasks.Add(entity);
             return await projectManagerDbContext.SaveChangesAsync();
         }
@@ -47,3 +51,4 @@ namespace ProjectManager.DataAccesslayer
         }
     }
 }
+

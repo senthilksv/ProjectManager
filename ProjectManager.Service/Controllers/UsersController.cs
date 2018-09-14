@@ -116,8 +116,8 @@ namespace ProjectManager.Service.Controllers
                 var user = await manageUser.GetUserAsync(id);
                 if (!manageUser.IsUserValidToDelete(user))
                 {
-                    logger.LogInformation("You can not delete as the user have have association with Project/Task");
-                    return BadRequest("You can not delete as the user have have association with Project/Task");
+                    logger.LogInformation("You can not delete as the user have association with Project/Task");
+                    return BadRequest("You can not delete as the user have association with Project/Task");
                 }
 
                 await manageUser.DeleteUserAsync(user);

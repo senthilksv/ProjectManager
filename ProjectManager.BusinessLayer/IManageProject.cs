@@ -13,5 +13,7 @@ namespace ProjectManager.BusinessLayer
         Task<Project> GetProjectAsync(int id);
         Task<int> EditProjectAsync(int id, Project project);
         bool IsProjectValidToClose(Project project);
+
+        Task<int> DeleteProjectAsync(Project project);
     }
 }

@@ -117,8 +117,24 @@ namespace ProjectManager.Service.Controllers
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteAsync(int id)
         {
-            logger.LogInformation($"Deleting Project is not accessible");
-            return NotFound("Deleting Project is not accessible");
+            try
+            {
+                var project = await manageProject.GetProjectAsync(id);
+                if (!manageProject.IsProjectValidToClose(project))
+                {
+                    logger.LogInformation("You can not delete as the user have association with Task");
+                    return BadRequest("You can not delete as the user have association with Task");
+                }
+
+                await manageProject.DeleteProjectAsync(project);
+
+                return Ok(project.ProjectId);
+            }
+            catch (Exception ex)
+            {
+                logger.LogError(ex.Message);
+                return StatusCode((int)HttpStatusCode.InternalServerError, "Internal Server error. Try again later");
+            }
         }
     }
 }

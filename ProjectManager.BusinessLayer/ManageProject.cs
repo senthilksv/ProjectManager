@@ -42,7 +42,17 @@ namespace ProjectManager.BusinessLayer
 
         public bool IsProjectValidToClose(Project project)
         {
-            throw new NotImplementedException();
+            logger.LogInformation("Check if project is valid to delete");
+            if (project.TaskDetails.Count > 0)
+                return false;
+
+            return true;
+        }
+
+        public async Task<int> DeleteProjectAsync(Project project)
+        {
+            logger.LogInformation($"Deleting project details for the id { project.ProjectId }");
+            return await projectRepository.DeleteAsync(project);
         }
     }
 }
