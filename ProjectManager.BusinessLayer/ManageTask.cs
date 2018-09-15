@@ -46,7 +46,7 @@ namespace ProjectManager.BusinessLayer
         {
             logger.LogInformation("Check if Task is valid to close it");
             var taskCollection = taskRepository.GetAllAsync().Result;
-            return !taskCollection.Any(task => task.ParentId == taskDetail.Id && !task.ActiveStatus);
+            return !taskCollection.Any(task => task.ParentId == taskDetail.Id && task.ActiveStatus);
         }
     }
 }

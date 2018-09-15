@@ -95,7 +95,7 @@ namespace ProjectManager.Service.Controllers
                     return BadRequest("Invalid task to edit.");
                 }
 
-                if (taskDetail.ActiveStatus && !manageTask.IsTaskValidToClose(taskDetail))
+                if (!taskDetail.ActiveStatus && !manageTask.IsTaskValidToClose(taskDetail))
                 {
                     logger.LogInformation("You can not close this task as the task have child tasks");
                     return BadRequest("You can not close this task as the task have child tasks");

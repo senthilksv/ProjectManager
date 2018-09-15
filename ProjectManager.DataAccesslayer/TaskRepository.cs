@@ -3,6 +3,7 @@ using Microsoft.Extensions.Logging;
 using ProjectManager.Model;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -33,7 +34,7 @@ namespace ProjectManager.DataAccesslayer
         public async Task<TaskDetail> GetAsync(int id)
         {
             return await projectManagerDbContext.Tasks.Include(project => project.UserDetail)
-                .Include(project => project.ProjectDetail).FirstOrDefaultAsync(t => t.Id == id);
+                .Include(project => project.ProjectDetail).AsNoTracking<TaskDetail>().FirstOrDefaultAsync(t => t.Id == id);
         }
 
         public async Task<int> InsertAsync(TaskDetail entity)
@@ -45,8 +46,10 @@ namespace ProjectManager.DataAccesslayer
         }
 
         public async Task<int> UpdateAsync(int id, TaskDetail entity)
-        {
-            projectManagerDbContext.Tasks.Update(entity);
+        {           
+            entity.ProjectDetail = null;
+            entity.UserDetail = null;
+            projectManagerDbContext.Tasks.Update(entity);          
             return await projectManagerDbContext.SaveChangesAsync();
         }
     }

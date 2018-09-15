@@ -46,6 +46,7 @@ namespace ProjectManager.DataAccesslayer
 
         public async Task<int> UpdateAsync(int id, Project entity)
         {
+
             projectManagerDbContext.Projects.Update(entity);
             return await projectManagerDbContext.SaveChangesAsync();
         }

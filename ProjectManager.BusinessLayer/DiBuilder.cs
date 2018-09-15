@@ -16,7 +16,7 @@ namespace ProjectManager.BusinessLayer
             services.AddTransient<IProjectRepository, ProjectRepository>();
             services.AddTransient<IUserRepository, UserRepository>();
             services.AddEntityFrameworkSqlServer().
-                AddDbContext<ProjectManagerDbContext>(option => option.UseSqlServer(config.GetSection("Database").GetSection("Connection").Value));
+                AddDbContext<ProjectManagerDbContext>(option => option.UseSqlServer(config.GetSection("Database").GetSection("Connection").Value), ServiceLifetime.Scoped);
 
         }
     }

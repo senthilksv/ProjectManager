@@ -20,6 +20,7 @@ namespace ProjectManager.DataAccesslayer
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder.UseLazyLoadingProxies(false);
+            optionsBuilder.EnableSensitiveDataLogging();
             //optionsBuilder.UseSqlServer(@"Server = DOTNET; Database = ProjectManagerDb; Trusted_Connection = True;");
         }
 
