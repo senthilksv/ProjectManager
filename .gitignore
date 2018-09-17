@@ -8,3 +8,5 @@ ProjectManager.BusinessLayer\bin\Debug\netcoreapp2.0
 .vs\
 
 
+*.cache
+*.cache
