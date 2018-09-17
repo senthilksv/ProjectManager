@@ -3,6 +3,7 @@ using ProjectManager.DataAccesslayer;
 using ProjectManager.Model;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -50,7 +51,7 @@ namespace ProjectManager.BusinessLayer
         public bool IsUserValidToDelete(User userDetail)
         {
             logger.LogInformation("Check if user is valid to delete");
-            if (userDetail.Projects.Count > 0 || userDetail.TaskDetails.Count > 0)
+            if (userDetail.Projects.Count > 0 || userDetail.TaskDetails.Any(taskDetail => taskDetail.ActiveStatus))
                 return false;
 
             return true;

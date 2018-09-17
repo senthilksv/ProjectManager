@@ -10,3 +10,11 @@ ProjectManager.BusinessLayer\bin\Debug\netcoreapp2.0
 
 *.cache
 *.cache
+*.dll
+*.pdb
+*.json
+*.targets
+*.props
+*.dll
+*.dll
+*.pdb

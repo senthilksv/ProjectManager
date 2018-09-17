@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Microsoft.Extensions.Logging;
@@ -43,7 +44,7 @@ namespace ProjectManager.BusinessLayer
         public bool IsProjectValidToClose(Project project)
         {
             logger.LogInformation("Check if project is valid to delete");
-            if (project.TaskDetails.Count > 0)
+            if (project.TaskDetails.Any(taskDetail => taskDetail.ActiveStatus))
                 return false;
 
             return true;
