@@ -96,7 +96,7 @@ namespace ProjectManager.Service.Controllers
                     return BadRequest("Invalid project to edit.");
                 }
 
-                if (project.ActiveStatus && !manageProject.IsProjectValidToClose(project))
+                if (!project.ActiveStatus && !manageProject.IsProjectValidToClose(project))
                 {
                     logger.LogInformation("You can not close this project as the project has association with task");
                     return BadRequest("You can not close this project as the project has association with task");
