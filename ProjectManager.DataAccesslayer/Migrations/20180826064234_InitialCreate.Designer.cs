@@ -7,11 +7,13 @@ using Microsoft.EntityFrameworkCore.Storage;
 using Microsoft.EntityFrameworkCore.Storage.Internal;
 using ProjectManager.DataAccesslayer;
 using System;
+using System.Diagnostics.CodeAnalysis;
 
 namespace ProjectManager.DataAccesslayer.Migrations
 {
     [DbContext(typeof(ProjectManagerDbContext))]
     [Migration("20180826064234_InitialCreate")]
+    [ExcludeFromCodeCoverage]
     partial class InitialCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

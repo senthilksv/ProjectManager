@@ -1,9 +1,11 @@
 ﻿using Microsoft.EntityFrameworkCore.Migrations;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics.CodeAnalysis;
 
 namespace ProjectManager.DataAccesslayer.Migrations
 {
+   
     public partial class datenulloption : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)

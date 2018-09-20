@@ -21,3 +21,4 @@ C:\Senthil\Projects\ProjectManager\ProjectManager.Service.Tests\bin\Debug\netcor
 C:\Senthil\Projects\ProjectManager\ProjectManager.Service.Tests\obj\Debug\netcoreapp2.1\ProjectManager.Service.Tests.csproj.CopyComplete
 C:\Senthil\Projects\ProjectManager\ProjectManager.Service.Tests\obj\Debug\netcoreapp2.1\ProjectManager.Service.Tests.dll
 C:\Senthil\Projects\ProjectManager\ProjectManager.Service.Tests\obj\Debug\netcoreapp2.1\ProjectManager.Service.Tests.pdb
+C:\Senthil\Projects\ProjectManager\ProjectManager.Service.Tests\bin\Debug\netcoreapp2.1\nlog.config
