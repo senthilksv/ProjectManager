@@ -18,3 +18,7 @@ ProjectManager.BusinessLayer\bin\Debug\netcoreapp2.0
 *.dll
 *.dll
 *.pdb
+*.config
+*.CopyComplete
+*.cache
+*.cache
